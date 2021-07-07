@@ -6,8 +6,8 @@
 
 using namespace std;
 
-string macPath = "/Users/Gold_Mock/Indiv_1/Indiv/in.txt";
-// string winPath = 'C:\Users\Matthew\Desktop\popka\Indiv\in.txt';
+string Path = "/Users/Gold_Mock/Indiv_1/Indiv/in.txt";
+//string Path = "C:/Users/Matthew/Desktop/popka/Indiv/in.txt";
 
 List Task(string path) {
     List words;
@@ -52,7 +52,7 @@ int main(int argc, char *argv[])
 
     cout << x["Key_2"] << endl;
 
-    cout << Task(macPath);
+    cout << Task(Path);
 
     // ------------------
 
