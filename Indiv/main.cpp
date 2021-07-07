@@ -6,6 +6,28 @@
 
 using namespace std;
 
+string macPath = "/Users/Gold_Mock/Indiv_1/Indiv/in.txt";
+// string winPath = 'C:\Users\Matthew\Desktop\popka\Indiv\in.txt';
+
+List Task(string path) {
+    List words;
+    string word;
+
+    ifstream in;
+    in.open(path);
+
+    while (in>>word) {
+       if (words[word] == -1) {
+           words.addLast(word, 1);
+       } else {
+           words.set_value(word);
+       }
+    }
+
+    return words;
+}
+
+
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
@@ -30,17 +52,7 @@ int main(int argc, char *argv[])
 
     cout << x["Key_2"] << endl;
 
-    List words;
-
-    ifstream in;
-    in.open("C:/Users/Matthew/Desktop/popka/Indiv/in.txt");
-
-    string word;
-    while (in>>word) {
-       words.addFirst(word, 1);
-    }
-
-    cout << words;
+    cout << Task(macPath);
 
     // ------------------
 

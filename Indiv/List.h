@@ -59,6 +59,7 @@ public:
         Node* cur = this->head;
         return cur->key;
     };
+
     int get_value() {
         Node* cur = this->head;
         return cur->value;
@@ -68,9 +69,17 @@ public:
         Node* cur = this->head;
         cur->key = key;
     };
-    void set_value(int value) {
+
+    void set_value(string key) {
         Node* cur = this->head;
-        cur->value = value;
+        while (cur) {
+            if (cur->key == key) {
+                cur->value += 1;
+                break;
+            } else {
+                cur = cur->next;
+            }
+        }
     };
 
     friend ostream& operator << (ostream& out, const List& list) {
