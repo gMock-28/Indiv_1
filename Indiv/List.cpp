@@ -80,3 +80,16 @@ bool List::checkElem(string key, int value) {
     }
     return false;
 }
+
+int List::operator [] (string key) {
+    Node* cur = this->head;
+    while (cur) {
+        if (cur->key == key) {
+            return cur->value;
+        } else {
+            cur = cur->next;
+        }
+    }
+    return -1;
+}
+
