@@ -51,6 +51,8 @@ public:
 
     int count();
 
+    void sorting();
+
     bool checkElem(string key, int value);
 
     void raiseValue(string key) {

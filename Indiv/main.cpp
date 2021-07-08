@@ -34,9 +34,12 @@ int main(int argc, char *argv[])
 
     List x;
 
-    x.addFirst("Key_1", 0);
-    x.addFirst("Key_2", 1);
-    x.addFirst("Key_3", 2);
+    x.addFirst("Key_1", 1);
+    x.addFirst("Key_2", 2);
+    x.addFirst("Key_3", 3);
+    x.addFirst("Key_5", 5);
+    x.addFirst("Key_6", 6);
+    x.addFirst("Key_4", 4);
 
     cout << x;
     cout << x["Key_1"] << endl;
@@ -45,14 +48,18 @@ int main(int argc, char *argv[])
 
     cout << "Is elem ('Key_1', 0) is in the list: " << x.checkElem("Key_1", 0) << endl << endl;
 
-    x.delLast();
+    //x.delLast();
+    //cout << x;
 
-    cout << x;
     cout << "Number of elements: " << x.count() << endl;
 
     cout << x["Key_2"] << endl << endl;
 
     cout << Task(Path);
+
+    x.sorting();
+
+    cout << x;
 
     // ------------------
 

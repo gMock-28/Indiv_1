@@ -81,6 +81,29 @@ bool List::checkElem(string key, int value) {
     return false;
 }
 
+void List::sorting() {
+    Node *left = head;
+    Node *right = head->next;
+
+    Node *temp = new Node("0", 0, nullptr, nullptr);
+
+    while (left->next){
+           while (right){
+                   if ((left->key) < (right->key)){
+                       temp->key = left->key;
+                       temp->value = left->value;
+                       left->key = right->key;
+                       left->value = right->value;
+                       right->key = temp->key;
+                       right->value = temp->value;
+                  }
+              right = right->next;
+          }
+      left = left->next;
+      right = left->next;
+    }
+}
+
 int List::operator [] (string key) {
     Node* cur = this->head;
     while (cur) {
