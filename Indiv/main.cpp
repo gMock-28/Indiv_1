@@ -20,7 +20,7 @@ List Task(string path) {
        if (words[word] == -1) {
            words.addLast(word, 1);
        } else {
-           words.set_value(word);
+           words.raiseValue(word);
        }
     }
 
@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
 
     cout << "Number of elements: " << x.count() << endl;
 
-    cout << x["Key_2"] << endl;
+    cout << x["Key_2"] << endl << endl;
 
     cout << Task(Path);
 
