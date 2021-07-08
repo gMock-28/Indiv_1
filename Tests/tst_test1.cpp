@@ -67,6 +67,7 @@ void Test1::sorting()
     a2.addFirst("Key_3", 3);
     a2.addLast("Key_4", 4);
 
+    //cout examples
     cout << a1;
     cout << a2;
     a2.sorting();
